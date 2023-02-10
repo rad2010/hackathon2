@@ -35,4 +35,10 @@ module "eks" {
       desired_size = 1
     }
   }
+aws_auth_roles = [
+    {
+      rolearn  = "arn:aws:iam::134726096766:user/pluralsight-28e004ef"
+    }
+  ]
+
 }
