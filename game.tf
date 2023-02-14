@@ -28,6 +28,11 @@ resource "kubernetes_deployment" "nginx" {
             container_port = 80
           }
 
+	   env {
+        name  = "REGION"
+        value = "us-west-2"
+      }
+
           resources {
             limits = {
               cpu    = "0.5"
